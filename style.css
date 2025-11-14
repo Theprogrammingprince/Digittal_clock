@@ -22,6 +22,38 @@
     }
 }
 
+/* Explicit dark class to support toggle (overrides variables) */
+.dark{
+    --bg-color: #0d1117;
+    --text-color: #f8f9fa;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --shadow-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Theme toggle button */
+#theme-toggle{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 999;
+    background: var(--glass-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 999px;
+    box-shadow: 0 6px 18px var(--shadow-color);
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#theme-toggle:hover{
+    transform: translateY(-3px);
+}
+
 /* Page Layout */
 body{
     background: var(--bg-color);
